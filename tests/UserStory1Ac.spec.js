@@ -2,6 +2,8 @@ import { test, expect } from '@playwright/test';
 import { faker } from '@faker-js/faker';
 import mysql from 'mysql2/promise';
 import { dbConfig } from '../config/dbConfig.js';
+import fs from 'fs';
+import path from 'path';
 
 const todayDate = new Date().toISOString().split('T')[0];
 
@@ -126,4 +128,22 @@ test('POST /api/v1/hero -AC-4 Verify record is created in WORKING_CLASS_HEROES',
     expect(rows[0].salary).toBe(salary);
     expect(rows[0].tax_paid).toBe(taxPaid);
     expect(rows[0].brownie_points).toBe(browniePoints); 
+});
+
+test('Ac -2 POST multiple heroes negative test data', async ({ request }) => {
+    // Read test data from file
+    const testDataPath = path.join(process.cwd(), 'testData', 'heroPostRequest.json');
+    const testData = JSON.parse(fs.readFileSync(testDataPath, 'utf-8'));
+
+    for (const data of testData) {
+        console.log(`Sending POST request for natid: ${data.natid}`);
+        
+        const response = await request.post('/api/v1/hero', {
+            data: data
+        });
+        const responseCode=response.status()
+        expect([400, 500]).toContain(responseCode);
+        const responseBody = await response.json();
+       console.log(responseBody)
+    }
 });

@@ -1,0 +1,52 @@
+[
+    {
+      "natid": "natid-21214",
+      "name": "Jafaqwr4135135125215125125125125125125215215125215215215125",
+      "gender": "MALE",
+      "birthDate": "2020-01-01T23:59:59",
+      "deathDate": null,
+      "salary": 10.00,
+      "taxPaid": 1,
+      "browniePoints": 9
+    },
+    {
+      "natid": "natid-131231",
+      "name": "world",
+      "gender": "FEMALE",
+      "birthDate": "1995-05-15T10:30:00",
+      "deathDate": "2022-02-20T14:45:10",
+      "salary": 2000.50,
+      "taxPaid": 150,
+      "browniePoints": 12
+    },
+    {
+        "natid": "natid-314124",
+        "name": "world",
+        "gender": "CROSS",
+        "birthDate": "1995-05-15T10:30:00",
+        "deathDate": "2022-02-20T14:45:10",
+        "salary": 2000.50,
+        "taxPaid": 150,
+        "browniePoints": 12
+      },
+      {
+        "natid": "natid-314124",
+        "name": "world",
+        "gender": "CROSS",
+        "birthDate": "1995-05-15T10:30:00",
+        "deathDate": "2022-02-20T14:45:10",
+        "salary": -2000.50,
+        "taxPaid": 150,
+        "browniePoints": 12
+      },
+      {
+        "natid": "natid-314124",
+        "name": "world",
+        "gender": "CROSS",
+        "birthDate": "1995-05-15T10:30:00",
+        "deathDate": "2022-02-20T14:45:10",
+        "salary": 2000.50,
+        "taxPaid": -150,
+        "browniePoints": 12
+      }
+  ]
